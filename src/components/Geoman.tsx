@@ -34,7 +34,7 @@ const Geoman = () => {
           .openPopup();
         leafletContainer.pm
           .getGeomanLayers()
-          .map((layer, index) => layer.bindPopup(`${t("figure.messsage")} ${index}`));
+          .map((layer  , index : number) => layer.bindPopup(`${t("figure.messsage")} ${index}`));
         // shape.layer.on("pm:edit", (e) => {
           // const event = e;
           // console.log(leafletContainer.pm.getGeomanLayers(true).toGeoJSON());
@@ -42,16 +42,16 @@ const Geoman = () => {
       }
     });
 
-    leafletContainer.on("pm:remove", (e) => {
-      console.log("object removed");
+    //leafletContainer.on("pm:remove", (e) => {
+      //console.log("object removed");
       // console.log(leafletContainer.pm.getGeomanLayers(true).toGeoJSON());
-    });
+    //});
 
     return () => {
       leafletContainer.pm.removeControls();
       leafletContainer.pm.setGlobalOptions({ pmIgnore: true });
     };
-  }, [context]);
+  }, [context, t]);
 
   return null;
 };

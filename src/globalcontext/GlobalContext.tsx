@@ -1,20 +1,21 @@
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext, PropsWithChildren } from 'react';
 
+type ThemeContextType = boolean
 
-const DarkModeContext = createContext();
-export const useDarkMode = () => {
+const DarkModeContext = createContext<ThemeContextType>(false);
+export const useDarkMode  = () => {
     return useContext(DarkModeContext);
 };
 
-export const DarkModeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+export const DarkModeProvider = ({ children  } : PropsWithChildren ) => {
+  const [isDarkMode, setIsDarkMode] = useState<ThemeContextType>(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode(prevMode => !prevMode);
   };
 
   return (
-    <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+    <DarkModeContext.Provider value={{ isDarkMode  , toggleDarkMode   }} >
       {children}
     </DarkModeContext.Provider>
   );
