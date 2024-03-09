@@ -89,5 +89,26 @@
   },
   "Directly": {
     "messsage": "Experience the most advanced geospatial data management with Leaflet-Geoman for effortless creation and editing of geospatial data. Directly on the map."
+  },
+  "HeaderAbout": {
+    "messsage": "The following items were used for this project:"
+  },
+  "reactrouter": {
+    "messsage": "React-router-dom library is used for component routing."
+  },
+  "context": {
+    "messsage": "Context is used to manage state and dark mode."
+  },
+  "i18next": {
+    "messsage": "For the multilingual mode, i18next library is used."
+  },
+  "Start": {
+    "messsage": "Start"
+  },
+  "Persian": {
+    "messsage": "Persian"
+  },
+  "English": {
+    "messsage": "English"
   }
 }

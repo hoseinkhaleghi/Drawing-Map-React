@@ -4,20 +4,28 @@ import { IoMenu } from "react-icons/io5";
 import { useState } from "react";
 // import { useDarkMode } from "../../../globalcontext/GlobalContext";
 // import { ThemeContext } from "../../../App";
-import DarkModeToggle from "../../DarkModeToggle";
+// import DarkModeToggle from "../../DarkModeToggle";
 import { useDarkMode } from "../../../globalcontext/GlobalContext";
+// import { useDarkMode } from "../globalcontext/GlobalContext";
+import { MdDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
+
 function Header() {
   // const {setDarkMode} = useContext(ThemeContext);
   const { t, i18n } = useTranslation("global");
   const [burger, setBurger] = useState(false);
-  const { isDarkMode } = useDarkMode();
+  // const { isDarkMode } = useDarkMode();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   function burgerhandler() {
     setBurger(!burger);
   }
 
   return (
-    <div className={isDarkMode ? "text-white" : ""}>
+    <div
+      dir={i18n.language == "en" ? "ltr" : "rtl"}
+      className={isDarkMode ? "text-white" : ""}
+    >
       <header className="fixed top right-0 left-0 z-50 backdrop-blur-md shadow ">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-20">
           <div className="flex lg:flex-1">
@@ -26,23 +34,25 @@ function Header() {
             </Link>
           </div>
           <div className="lg:flex-1 gap-3 hidden lg:flex lg:gap-x-12">
-            <Link to="/">
+            <Link to="/about">
               <span className="text-2xl">{t("about.messsage")}</span>
             </Link>
             <button
               className="text-2xl"
               onClick={() => i18n.changeLanguage("fa")}
             >
-              FA
+              {t("Persian.messsage")}
             </button>
             <button
               className="text-2xl"
               onClick={() => i18n.changeLanguage("en")}
             >
-              EN
+              {t("English.messsage")}
             </button>
             <div>
-              <DarkModeToggle />
+              <button onClick={toggleDarkMode} className=" text-3xl">
+                {isDarkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
+              </button>
             </div>
           </div>
           <div className="flex lg:hidden">
@@ -87,7 +97,7 @@ function Header() {
                         className="text-2xl"
                         onClick={() => i18n.changeLanguage("fa")}
                       >
-                        FA
+                        {t("Persian.messsage")}
                       </button>
                     </div>
                     <div className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
@@ -95,7 +105,7 @@ function Header() {
                         className="text-2xl"
                         onClick={() => i18n.changeLanguage("en")}
                       >
-                        EN
+                        {t("English.messsage")}
                       </button>
                     </div>
                   </div>
