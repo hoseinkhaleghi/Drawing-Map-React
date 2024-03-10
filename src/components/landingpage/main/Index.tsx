@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../../globalcontext/GlobalContext";
-
+import video from "../../../assets/video_2024-03-10_09-51-09.mp4"
 function Main() {
   const { t, i18n } = useTranslation("global");
   const { isDarkMode } = useDarkMode();
@@ -43,7 +43,7 @@ function Main() {
               loop
               muted
               playsInline
-              src="https://geoman-static.onrender.com/assets/videos/GeneralDrawingEditing.mp4"
+              src={video}
               className=" rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
             ></video>
           </div> 
