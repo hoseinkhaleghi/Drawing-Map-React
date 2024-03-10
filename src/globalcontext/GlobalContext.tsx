@@ -1,22 +1,29 @@
-import { createContext, useState, useContext, PropsWithChildren } from 'react';
+import { createContext, useState, useContext, PropsWithChildren } from "react";
+interface ThemeContextType {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
 
-type ThemeContextType = boolean
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const DarkModeContext = createContext<ThemeContextType>(false);
-export const useDarkMode  = () => {
-    return useContext(DarkModeContext);
+export const useDarkMode = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
 };
 
-export const DarkModeProvider = ({ children  } : PropsWithChildren ) => {
-  const [isDarkMode, setIsDarkMode] = useState<ThemeContextType>(false);
+export function ThemeProvider({ children }: PropsWithChildren) {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(prevMode => !prevMode);
+    setIsDarkMode((prev) => !prev);
   };
 
   return (
-    <DarkModeContext.Provider value={{ isDarkMode  , toggleDarkMode   }} >
+    <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
       {children}
-    </DarkModeContext.Provider>
+    </ThemeContext.Provider>
   );
-};
+}

@@ -1,81 +1,4 @@
 {
-  "header": {
-    "messsage": "Welcome back!"
-  },
-  "signin": {
-    "messsage": "Sign In"
-  },
-  "signup": {
-    "messsage": "Sign Up"
-  },
-  "footslide1": {
-    "messsage": "lorem"
-  },
-
-  "iran": {
-    "messsage": "Iran(+98)"
-  },
-
-  "google": {
-    "messsage": "Continue with Google"
-  },
-  "x": {
-    "messsage": "Continue with X"
-  },
-  "apple": {
-    "messsage": "Continue with Apple"
-  },
-  "createaccount": {
-    "messsage": "create account"
-  },
-
-  "or": {
-    "messsage": "or"
-  },
-
-  "haveacc": {
-    "messsage": "Already Have You Account?"
-  },
-
-  "lorem2": {
-    "messsage": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore explicabo asperiores, laborum dolorem animi debitis laudantium consectetur non sit ipsam!"
-  },
-
-  "email": {
-    "messsage": "Email"
-  },
-
-  "password": {
-    "messsage": "Password"
-  },
-
-  "phoneNumber": {
-    "messsage": "Phone Number"
-  },
-  "enterotp": {
-    "messsage": "Enter The Code"
-  },
-
-  "verifyemail": {
-    "messsage": "Verify Email"
-  },
-
-  "onemorestep": {
-    "messsage": "One more step to get started"
-  },
-
-  "carefulotp": {
-    "messsage": "Enter the ETP code that we sent to your email Be careful not to share the code with any code with anyone."
-  },
-
-  "serverdown": {
-    "messsage": "Server Is Down"
-  },
-
-  "emailinvalid": {
-    "messsage": "Email is invalid"
-  },
-
   "figure": {
     "messsage": "I am figure N°"
   },
@@ -110,5 +33,11 @@
   },
   "English": {
     "messsage": "English"
+  },
+  "reactleaflet": {
+    "messsage": "The reactleaflet library was used to create an interactive map of components."
+  },
+  "geoman": {
+    "messsage": "Drawing Map Project"
   }
 }

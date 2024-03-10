@@ -2,19 +2,13 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { useState } from "react";
-// import { useDarkMode } from "../../../globalcontext/GlobalContext";
-// import { ThemeContext } from "../../../App";
-// import DarkModeToggle from "../../DarkModeToggle";
 import { useDarkMode } from "../../../globalcontext/GlobalContext";
-// import { useDarkMode } from "../globalcontext/GlobalContext";
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
 
 function Header() {
-  // const {setDarkMode} = useContext(ThemeContext);
   const { t, i18n } = useTranslation("global");
   const [burger, setBurger] = useState(false);
-  // const { isDarkMode } = useDarkMode();
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   function burgerhandler() {
@@ -24,7 +18,7 @@ function Header() {
   return (
     <div
       dir={i18n.language == "en" ? "ltr" : "rtl"}
-      className={isDarkMode ? "text-white" : ""}
+      className={isDarkMode ? "text-white z-50" : "z-50"}
     >
       <header className="fixed top right-0 left-0 z-50 backdrop-blur-md shadow ">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-20">

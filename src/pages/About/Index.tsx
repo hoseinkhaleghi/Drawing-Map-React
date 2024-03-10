@@ -12,7 +12,7 @@ function About() {
       className={isDarkMode ? "bg-blue-950 text-white " : ""}
     >
       <Header />
-      <div className="flex flex-col gap-5 mx-5 w-full lg:pt-16 ">
+      <div className="flex flex-col gap-5 mx-5 lg:pt-16 ">
         <h3
           className={
             isDarkMode
@@ -25,6 +25,7 @@ function About() {
         <p className="mt-6 text-lg leading-8 ">{t("reactrouter.messsage")}</p>
         <p className="mt-6 text-lg leading-8 ">{t("context.messsage")}</p>
         <p className="mt-6 text-lg leading-8 ">{t("i18next.messsage")}</p>
+        <p className="mt-6 text-lg leading-8 ">{t("reactleaflet.messsage")}</p>
       </div>
     </div>
   );

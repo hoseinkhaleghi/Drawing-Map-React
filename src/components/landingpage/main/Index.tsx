@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../../globalcontext/GlobalContext";
-import video from "../../../assets/video_2024-03-10_09-51-09.mp4"
+import video from "../../../assets/video_2024-03-10_09-51-09.mp4";
 function Main() {
   const { t, i18n } = useTranslation("global");
   const { isDarkMode } = useDarkMode();
@@ -15,11 +15,11 @@ function Main() {
           <h1
             className={
               isDarkMode
-                ? "mt-10 text-4xl font-bold tracking-tight   sm:text-6xl"
-                : "mt-10 text-4xl font-bold tracking-tight  sm:text-6xl"
+                ? "mt-10 text-4xl font-bold tracking-tight sm:text-6xl"
+                : "mt-10 text-4xl font-bold tracking-tight sm:text-6xl"
             }
           >
-            Revolutionize GIS Data Management with Leaflet-Geoman
+            {t("geoman.messsage")}
           </h1>
           <p className="mt-6 text-lg leading-8 ">{t("Directly.messsage")}</p>
           <div className="flex lg:flex-1">
@@ -36,8 +36,8 @@ function Main() {
             </Link>
           </div>
         </div>
-        <div className=" mt-16 flex max-w-2xl sm:mt-24  lg:max-w-2xl lg:flex-none ">
-          <div className="max-w-2xl  sm:max-w-xl lg:max-w-2xl">
+        <div className=" mt-16 flex mx-auto max-w-2xl sm:mt-24  lg:max-w-2xl lg:flex-none ">
+          <div className="max-w-2xl mx-auto  sm:max-w-xl lg:max-w-2xl">
             <video
               autoPlay
               loop
@@ -46,7 +46,7 @@ function Main() {
               src={video}
               className=" rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
             ></video>
-          </div> 
+          </div>
         </div>
       </div>
     </div>

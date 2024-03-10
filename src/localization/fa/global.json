@@ -1,82 +1,4 @@
 {
-  "header": {
-    "messsage": "خوش آمدید"
-  },
-  "signin": {
-    "messsage": "وارد شوید"
-  },
-
-  "signup": {
-    "messsage": "ثبت نام"
-  },
-  "footslide1": {
-    "messsage": "لورم"
-  },
-
-  "iran": {
-    "messsage": "ایران(98+)"
-  },
-  "google": {
-    "messsage": "از طریق گوگل وارد شوید"
-  },
-  "x": {
-    "messsage": "از طریق ایکس وارد شوید"
-  },
-  "apple": {
-    "messsage": "از طریق اپل وارد شوید"
-  },
-
-  "createaccount": {
-    "messsage": "ساخت اکانت"
-  },
-
-  "or": {
-    "messsage": "یا"
-  },
-  "haveacc": {
-    "messsage": "در حال حاضر اکانت دارید ؟"
-  },
-
-  "lorem2": {
-    "messsage": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و برای شرایط فعلی تکنولوژی مورد نیاز با هدف بهبود ابزار می باشد."
-  },
-
-  "email": {
-    "messsage": "ایمیل"
-  },
-
-  "password": {
-    "messsage": "پسورد"
-  },
-
-  "phoneNumber": {
-    "messsage": "تلفن همراه"
-  },
-
-  "enterotp": {
-    "messsage": "کد را وارد کنید"
-  },
-
-  "verifyemail": {
-    "messsage": "تایید ایمیل"
-  },
-
-  "onemorestep": {
-    "messsage": "یک قدم تا آغاز مانده است"
-  },
-
-  "carefulotp": {
-    "messsage": "لطفا کدی را که به ایمیل شما ارسال کردیم را وارد کنید . لطفا کد را به اشتراک نگذارید"
-  },
-
-  "serverdown": {
-    "messsage": "ارتباط با سرور برقرار نشد"
-  },
-
-  "emailinvalid": {
-    "messsage": "ایمیل نامعتبر میباشد"
-  },
-
   "figure": {
     "messsage": "مدل شماره : "
   },
@@ -111,5 +33,11 @@
   },
   "English": {
     "messsage": "انگلیسی"
+  },
+  "reactleaflet": {
+    "messsage": "برای ایجاد نقشه تعاملی اجزا از کتابخانه reactleaflet استفاده شده ."
+  },
+  "geoman": {
+    "messsage": "پروژه Drawing Map"
   }
 }
